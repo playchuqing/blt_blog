@@ -1,0 +1,102 @@
+html,body{
+    display: block;
+    background-color: #f0f1f5;
+    color: #333;
+}
+ul{
+    li{
+        list-style: none;
+    }
+}
+#_layout{
+    width: 100%;
+    height: auto; 
+    margin: 0 auto;
+    position: relative;
+
+
+    .header{
+        position: fixed;
+        top: 0;
+        z-index: 50;
+        width: 100%;
+        height: 62px;
+        background-color: #202020;
+        color:#fff;
+        display: flex;
+        justify-content: center;
+        .header_inner{
+            box-sizing: border-box;
+            width: 1200px;
+            height: 62px;
+            display: flex;
+            // 1200 = 320+180+700
+            .header_logo_content{
+                width: 320px;
+                height: 100%;
+                padding: 0 60px 0 60px;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                .header_logo{
+                    width: 45px;
+                    height: 45px;
+                    background-color: #85f8ff;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 5px;
+                    margin-right: 10px;
+                    img{
+                        width: 38px;
+                        height: 38px;
+                    }
+                }
+                .header_title{
+                    width: 100px;
+                    height: 62px;
+                    display: flex;
+                    align-items: center;
+                    span{
+                        letter-spacing: 2px;
+                        color: #e1e1e1;
+                        font-size: 24px;
+                    }
+                }
+            }
+            .header_navwrap{
+                .header_navbar{
+                    box-sizing: border-box;
+                    padding: 0 10px 0 10px;
+                    align-items: center;
+                    display: flex;
+                    width: 700px;
+                    height: 100%;
+                    justify-content: space-between;
+                    a{
+                        display: flex;
+                        // font-size: 14px;
+                        justify-content: center;
+                        width: 60px;
+                       &:hover{
+                           display: flex;
+                           align-items: center;
+                           width: 60px;
+                           height: 62px;
+                           background-color: rgba(255, 255, 255, 0.318);
+                       }
+                    }
+                }
+            }
+            .header_right{
+                width: 180px;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    
+}

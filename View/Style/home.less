@@ -1,0 +1,122 @@
+.main{
+    width: 100%;
+    height: 100%;
+    // background-color: #fff;
+    padding: 62px 0 62px 0;
+    display: flex;
+    justify-content: center;
+    .blt_layout{
+        box-sizing: border-box;
+        display: flex;
+        // justify-content: space-evenly;
+        width: 1200px;
+        height: 100%;
+        padding: 10px 90px 10px 90px;
+        justify-content: space-around;
+        .blt_layout_main{
+            // background-color: #fff;
+            width: 690px;
+            height: 100%;
+            .blt_banner_container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 690px;
+                height: 300px;
+            }
+            .blt_article_list_body{
+                // background-color: #fff;
+                width: 690px;
+                height: 100%;
+                .blt_article_card{
+                    border-radius: 3px;
+                    box-sizing: border-box;
+                    margin: 2px;
+                    width: 690px;
+                    height: 310px;
+                    background-color: #fff;
+                    padding: 20px;
+                    .blt_article_card_header{
+                        box-sizing: border-box;
+                        width: 648px;
+                        height: 38px;
+                        padding: 0 10px 0 10px;
+                        .blt_article_card_info{
+                            display: flex;
+                            align-items: center;
+                            width: 400px;
+                            height: 38px;
+                            a{
+                                width: 400px;
+                                height: 38px;
+                                display: flex;
+                                // justify-content: center;
+                                align-items: center;
+                                // background-color: rgb(96, 72, 72);
+                                // border:1px solid rgb(144, 144, 144);
+                                img{
+                                    width: 30px;
+                                    height: 30px;
+                                    margin-right: 10px;
+                                }
+                                .name{
+                                    margin-right: 10px;
+                                    font-size: 14px;
+                                    color: #0e0e0e;
+                                }
+                                .datetime{
+                                    margin-right: 10px;
+                                    font-size: 8px;
+                                    color: #c2c2c2;
+                                }
+                            }
+                        }
+                    }
+                    .blt_article_card_main{
+                        box-sizing: border-box;
+                        width: 648px;
+                        height: 170px;
+                        padding: 0 10px 0 10px;
+                        .blt_article_card_content{
+                            padding: 5px;
+                            width: 608px;
+                            height: 30px;
+                            font-size: 14px;
+                            color: #a2a2a2;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                        .blt_article_card_preview{
+                            padding-left: 5px;
+                            padding-right: 5px;
+                            width:370px ;
+                            height: 118px;
+                            display: flex;
+                            overflow: hidden;
+                            align-items: center;
+                            // 110*3 330 30
+                            .preview{
+                                margin: 0 5px 0 5px;
+                                width: 110px;
+                                height: 110px;
+                            }
+                        }
+                    }
+                    .blt_article_card_footer{
+                        box-sizing: border-box;
+                        width: 648px;
+                        height: 40px;
+                        padding: 0 10px 0 10px;
+                    }
+                }
+            }
+        }
+        .blt_layout_sub{
+            background-color: #fff;
+            width: 290px;
+            height: 100%;
+        }
+    }
+
+}
