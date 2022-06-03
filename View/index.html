@@ -1,23 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>测试代码</title>
-    <script src="./index.js"></script>
+    <title>摆烂兔</title>
+    <link rel="shortcut icon" href="./Assets/favicon(2).ico" type="image/x-icon">
+    <link rel="stylesheet" href="./Style/style_2.css">
+    <link rel="stylesheet" href="./Style/style_1.css">
+    <link rel="stylesheet" href="./Style/home.css">
+    <script src="./Script/banner.js"></script>
 </head>
+
 <body>
-    <div id="dome">111</div>
-    <script>
-        click();
-        console.log(listinfo[0].articles);
-       let articles = ['2','3','4','5','6','7'];
-       let articles2=['a','b','c','d'];
-       console.log(articles);
-        listinfo[0].InfoArr.push(articles);
-        listinfo[0].InfoArr.push(articles2);
-        console.log(listinfo[0].InfoArr);
-    </script>
+    <div id="_layout">
+        <div class="header">
+            <div class="header_inner">
+                <div class="header_logo_content">
+                    <div class="header_logo">
+                        <img src="./Assets/bailantu.png" alt="header_logo">
+                    </div>
+                    <div class="header_title">
+                        <span>摆烂兔</span>
+                    </div>
+                </div>
+                <div class="header_navwrap">
+                    <div class="header_navbar">
+                        <a href="#" class="home">首页</a>
+                        <a href="#" class="home">未知</a>
+                        <a href="#" class="home">未知</a>
+                        <a href="#" class="home">未知</a>
+                        <div class="header_navitem">
+                            <span>更多</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="header_right">
+                    <div>
+                        <a href="http://localhost:83/html/index.html" target="_blank">Admin</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="blt_layout">
+
+
+                <div class="blt_layout_main">
+                    <div class="blt_banner_container">
+                        <ul id="banner"></ul>
+                    </div>
+                    <div class="blt_article_list_body" id="blt_article_list_body">
+                        <ul>
+                            <li class="blt_article_card" id="blt_article_card">
+                                <div class="blt_article_card_header">
+                                    <div class="blt_article_card_info">
+                                        <a href="#">
+                                            <img src="./Assets/bailantu.png" alt="">
+                                            <span class="name">迷路的史莱姆酱</span>
+                                            <span class="datetime">05-16·官方客服</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="blt_article_card_main">
+                                    <!-- 标题 -->
+                                    <div class="blt_article_card_title">
+                                        <h3>【有奖活动】提瓦特冒险记——材料去哪了？</h3>
+                                    </div>
+                                    <!-- 内容 -->
+                                    <div class="blt_article_card_content">
+                                        姆，旅行者们好呀~听说，丘丘人最近找到了一张香料制作的配方。姆，香料是什么样子的呢？酱酱也很好奇呢~今天天气不错，丘丘人约酱酱一起去找调制香料的原材料。加油姆——丘丘人！
+                                    </div>
+                                    <!-- 图片内容 -->
+                                    <div class="blt_article_card_preview">
+                                        <img class="preview" src="./Assets/bailantu.png" alt="预览">
+                                        <img class="preview" src="./Assets/bailantu.png" alt="预览">
+                                        <img class="preview" src="./Assets/bailantu.png" alt="预览">
+
+                                    </div>
+                                </div>
+                                <div class="blt_article_card_footer">1</div>
+                            </li>
+                            <li class="blt_article_card" id="blt_article_card">
+                                <div class="blt_article_card_header">
+                                    <div class="blt_article_card_info">
+                                        <a href="#">
+                                            <img src="./Assets/bailantu.png" alt="">
+                                            <span class="name">迷路的史莱姆酱</span>
+                                            <span class="datetime">05-16·官方客服</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="blt_article_card_main">
+                                    <!-- 标题 -->
+                                    <div class="blt_article_card_title">
+                                        <h3>【有奖活动】提瓦特冒险记——材料去哪了？</h3>
+                                    </div>
+                                    <!-- 内容 -->
+                                    <div class="blt_article_card_content">
+                                        姆，旅行者们好呀~听说，丘丘人最近找到了一张香料制作的配方。姆，香料是什么样子的呢？酱酱也很好奇呢~今天天气不错，丘丘人约酱酱一起去找调制香料的原材料。加油姆——丘丘人！
+                                    </div>
+                                    <!-- 图片内容 -->
+                                    <div class="blt_article_card_preview">
+                                        <img class="preview" src="./Assets/bailantu.png" alt="预览">
+                                        <img class="preview" src="./Assets/bailantu.png" alt="预览">
+                                        <img class="preview" src="./Assets/bailantu.png" alt="预览">
+                                    </div>
+                                </div>
+                                <div class="blt_article_card_footer">2</div>
+                            </li>
+                            <li class="blt_article_card" id="blt_article_card">
+                                <div class="blt_article_card_header">
+                                    <div class="blt_article_card_info">
+                                        <a href="#">
+                                            <img src="./Assets/bailantu.png" alt="">
+                                            <span class="name">迷路的史莱姆酱</span>
+                                            <span class="datetime">05-16·官方客服</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="blt_article_card_main">
+                                    <!-- 标题 -->
+                                    <div class="blt_article_card_title">
+                                        <h3>【有奖活动】提瓦特冒险记——材料去哪了？</h3>
+                                    </div>
+                                    <!-- 内容 -->
+                                    <div class="blt_article_card_content">
+                                        姆，旅行者们好呀~听说，丘丘人最近找到了一张香料制作的配方。姆，香料是什么样子的呢？酱酱也很好奇呢~今天天气不错，丘丘人约酱酱一起去找调制香料的原材料。加油姆——丘丘人！
+                                    </div>
+                                    <!-- 图片内容 -->
+                                    <div class="blt_article_card_preview">
+                                        <img class="preview" src="./Assets/bailantu.png" alt="预览">
+                                        <img class="preview" src="./Assets/bailantu.png" alt="预览">
+                                        <img class="preview" src="./Assets/bailantu.png" alt="预览">
+                                    </div>
+                                </div>
+                                <div class="blt_article_card_footer">3</div>
+                            </li>
+                            <li class="blt_article_card" id="blt_article_card">
+                                <div class="blt_article_card_header">
+                                    <div class="blt_article_card_info">
+                                        <a href="#">
+                                            <img src="./Assets/bailantu.png" alt="">
+                                            <span class="name">迷路的史莱姆酱</span>
+                                            <span class="datetime">05-16·官方客服</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="blt_article_card_main">
+                                    <!-- 标题 -->
+                                    <div class="blt_article_card_title">
+                                        <h3>【有奖活动】提瓦特冒险记——材料去哪了？</h3>
+                                    </div>
+                                    <!-- 内容 -->
+                                    <div class="blt_article_card_content">
+                                        姆，旅行者们好呀~听说，丘丘人最近找到了一张香料制作的配方。姆，香料是什么样子的呢？酱酱也很好奇呢~今天天气不错，丘丘人约酱酱一起去找调制香料的原材料。加油姆——丘丘人！
+                                    </div>
+                                    <!-- 图片内容 -->
+                                    <div class="blt_article_card_preview">
+                                        <img class="preview" src="./Assets/bailantu.png" alt="预览">
+                                        <img class="preview" src="./Assets/bailantu.png" alt="预览">
+                                        <img class="preview" src="./Assets/bailantu.png" alt="预览">
+                                    </div>
+                                </div>
+                                <div class="blt_article_card_footer">4</div>
+                            </li>
+                            <li class="blt_article_card" id="blt_article_card">
+                                <div class="blt_article_card_header">
+                                    <div class="blt_article_card_info">
+                                        <a href="#">
+                                            <img src="./Assets/bailantu.png" alt="">
+                                            <span class="name">迷路的史莱姆酱</span>
+                                            <span class="datetime">05-16·官方客服</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="blt_article_card_main">
+                                    <!-- 标题 -->
+                                    <div class="blt_article_card_title">
+                                        <h3>【有奖活动】提瓦特冒险记——材料去哪了？</h3>
+                                    </div>
+                                    <!-- 内容 -->
+                                    <div class="blt_article_card_content">
+                                        姆，旅行者们好呀~听说，丘丘人最近找到了一张香料制作的配方。姆，香料是什么样子的呢？酱酱也很好奇呢~今天天气不错，丘丘人约酱酱一起去找调制香料的原材料。加油姆——丘丘人！
+                                    </div>
+                                    <!-- 图片内容 -->
+                                    <div class="blt_article_card_preview">
+                                        <img class="preview" src="./Assets/bailantu.png" alt="预览">
+                                        <img class="preview" src="./Assets/bailantu.png" alt="预览">
+                                        <img class="preview" src="./Assets/bailantu.png" alt="预览">
+                                    </div>
+                                </div>
+                                <div class="blt_article_card_footer">5</div>
+                            </li>
+                            <li class="blt_article_card" id="blt_article_card">
+                                <div class="blt_article_card_header">
+                                    <div class="blt_article_card_info">
+                                        <a href="#">
+                                            <img src="./Assets/bailantu.png" alt="">
+                                            <span class="name">迷路的史莱姆酱</span>
+                                            <span class="datetime">05-16·官方客服</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="blt_article_card_main">
+                                    <!-- 标题 -->
+                                    <div class="blt_article_card_title">
+                                        <h3>【有奖活动】提瓦特冒险记——材料去哪了？</h3>
+                                    </div>
+                                    <!-- 内容 -->
+                                    <div class="blt_article_card_content">
+                                        姆，旅行者们好呀~听说，丘丘人最近找到了一张香料制作的配方。姆，香料是什么样子的呢？酱酱也很好奇呢~今天天气不错，丘丘人约酱酱一起去找调制香料的原材料。加油姆——丘丘人！
+                                    </div>
+                                    <!-- 图片内容 -->
+                                    <div class="blt_article_card_preview">
+                                        <img class="preview" src="./Assets/bailantu.png" alt="预览">
+                                        <img class="preview" src="./Assets/bailantu.png" alt="预览">
+                                        <img class="preview" src="./Assets/bailantu.png" alt="预览">
+                                    </div>
+                                </div>
+                                <div class="blt_article_card_footer">6</div>
+                            </li>
+                            <li class="blt_article_card" id="blt_article_card">
+                                <div class="blt_article_card_header">
+                                    <div class="blt_article_card_info">
+                                        <a href="#">
+                                            <img src="./Assets/bailantu.png" alt="">
+                                            <span class="name">迷路的史莱姆酱</span>
+                                            <span class="datetime">05-16·官方客服</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="blt_article_card_main">
+                                    <!-- 标题 -->
+                                    <div class="blt_article_card_title">
+                                        <h3>【有奖活动】提瓦特冒险记——材料去哪了？</h3>
+                                    </div>
+                                    <!-- 内容 -->
+                                    <div class="blt_article_card_content">
+                                        姆，旅行者们好呀~听说，丘丘人最近找到了一张香料制作的配方。姆，香料是什么样子的呢？酱酱也很好奇呢~今天天气不错，丘丘人约酱酱一起去找调制香料的原材料。加油姆——丘丘人！
+                                    </div>
+                                    <!-- 图片内容 -->
+                                    <div class="blt_article_card_preview">
+                                        <img class="preview" src="./Assets/bailantu.png" alt="预览">
+                                        <img class="preview" src="./Assets/bailantu.png" alt="预览">
+                                        <img class="preview" src="./Assets/bailantu.png" alt="预览">
+                                    </div>
+                                </div>
+                                <div class="blt_article_card_footer">7</div>
+                            </li>
+                            <li class="blt_article_card" id="blt_article_card">
+                                <div class="blt_article_card_header">
+                                    <div class="blt_article_card_info">
+                                        <a href="#">
+                                            <img src="./Assets/bailantu.png" alt="">
+                                            <span class="name">迷路的史莱姆酱</span>
+                                            <span class="datetime">05-16·官方客服</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="blt_article_card_main">
+                                    <!-- 标题 -->
+                                    <div class="blt_article_card_title">
+                                        <h3>【有奖活动】提瓦特冒险记——材料去哪了？</h3>
+                                    </div>
+                                    <!-- 内容 -->
+                                    <div class="blt_article_card_content">
+                                        姆，旅行者们好呀~听说，丘丘人最近找到了一张香料制作的配方。姆，香料是什么样子的呢？酱酱也很好奇呢~今天天气不错，丘丘人约酱酱一起去找调制香料的原材料。加油姆——丘丘人！
+                                    </div>
+                                    <!-- 图片内容 -->
+                                    <div class="blt_article_card_preview">
+                                        <img class="preview" src="./Assets/bailantu.png" alt="预览">
+                                        <img class="preview" src="./Assets/bailantu.png" alt="预览">
+                                        <img class="preview" src="./Assets/bailantu.png" alt="预览">
+                                    </div>
+                                </div>
+                                <div class="blt_article_card_footer">8</div>
+                            </li>
+                            <li class="blt_article_card" id="blt_article_card">
+                                <div class="blt_article_card_header">
+                                    <div class="blt_article_card_info">
+                                        <a href="#">
+                                            <img src="./Assets/bailantu.png" alt="">
+                                            <span class="name">迷路的史莱姆酱</span>
+                                            <span class="datetime">05-16·官方客服</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="blt_article_card_main">
+                                    <!-- 标题 -->
+                                    <div class="blt_article_card_title">
+                                        <h3>【有奖活动】提瓦特冒险记——材料去哪了？</h3>
+                                    </div>
+                                    <!-- 内容 -->
+                                    <div class="blt_article_card_content">
+                                        姆，旅行者们好呀~听说，丘丘人最近找到了一张香料制作的配方。姆，香料是什么样子的呢？酱酱也很好奇呢~今天天气不错，丘丘人约酱酱一起去找调制香料的原材料。加油姆——丘丘人！
+                                    </div>
+                                    <!-- 图片内容 -->
+                                    <div class="blt_article_card_preview">
+                                        <img class="preview" src="./Assets/bailantu.png" alt="预览">
+                                        <img class="preview" src="./Assets/bailantu.png" alt="预览">
+                                        <img class="preview" src="./Assets/bailantu.png" alt="预览">
+                                    </div>
+                                </div>
+                                <div class="blt_article_card_footer">9</div>
+                            </li>
+                            <li class="blt_article_card" id="blt_article_card">
+                                <div class="blt_article_card_header">
+                                    <div class="blt_article_card_info">
+                                        <a href="#">
+                                            <img src="./Assets/bailantu.png" alt="">
+                                            <span class="name">迷路的史莱姆酱</span>
+                                            <span class="datetime">05-16·官方客服</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="blt_article_card_main">
+                                    <!-- 标题 -->
+                                    <div class="blt_article_card_title">
+                                        <h3>【有奖活动】提瓦特冒险记——材料去哪了？</h3>
+                                    </div>
+                                    <!-- 内容 -->
+                                    <div class="blt_article_card_content">
+                                        姆，旅行者们好呀~听说，丘丘人最近找到了一张香料制作的配方。姆，香料是什么样子的呢？酱酱也很好奇呢~今天天气不错，丘丘人约酱酱一起去找调制香料的原材料。加油姆——丘丘人！
+                                    </div>
+                                    <!-- 图片内容 -->
+                                    <div class="blt_article_card_preview">
+                                        <img class="preview" src="./Assets/bailantu.png" alt="预览">
+                                        <img class="preview" src="./Assets/bailantu.png" alt="预览">
+                                        <img class="preview" src="./Assets/bailantu.png" alt="预览">
+                                    </div>
+                                </div>
+                                <div class="blt_article_card_footer">10</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
+                <!-- 博文跳转 方法 -->
+<script>
+                    var lists = document.getElementById("blt_article_list_body");
+                    var divs = lists.getElementsByTagName("li");
+                    let link = [
+                        "1连接",
+                        "2连接"
+                    ];
+                    for (let i = 0; i < divs.length; i++) {
+                        console.log(i);
+                        console.log(divs[i]);
+                        divs[i].onclick = function () {
+                            console.log("点击了" + (i + 1) + "个<li>标签" + "跳转到" + link[i]);
+                            //  location.href='./Html/article.html?link="'+link[i]+'"';
+                            window.open('./Html/article.html?link="' + link[i] + '"');
+                        }
+                    }
+</script>

@@ -18,11 +18,16 @@
   height: 100%;
 }
 .main .blt_layout .blt_layout_main .blt_banner_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 690px;
-  height: 300px;
+  height: 200px;
+  margin-bottom: 30px;
+}
+.main .blt_layout .blt_layout_main .blt_banner_container ul {
+  position: relative;
+  width: 690px;
+  display: flex;
+  align-items: center;
+  height: 200px;
 }
 .main .blt_layout .blt_layout_main .blt_article_list_body {
   width: 690px;

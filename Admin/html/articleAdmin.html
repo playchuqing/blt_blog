@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/articleAdmin.css">
+    <script src="../JS/aricleAdmin_btn.js"></script>
+</head>
+
+<body>
+    <div id="box">
+        <div class="header">
+            <div class="title">文章管理</div>
+            <div class="nav">
+                <ul class="article_btns">
+                    <li class="select_btn" onclick="ShowSelectBox()">查看文章</li>
+                    <li class="insert_btn" onclick="ShowInsertBox()">发布文章</li>
+                    <li class="update_btn" onclick="ShowUpdateBox()">修改文章</li>
+                    <li class="delete_btn" onclick="ShowDeleteBox()">删除文章</li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="select_aricle" id="select_aricle" style="display: none;">
+                查看文章
+            </div>
+            <div class="insert_aricle" id="insert_aricle" style="display: none;">
+                <form action="#">
+                  <input type="text" id="article_title" name="article_title" class="article_title" placeholder="请输入文章标题"><br/>
+                  <input type="text" id="time" name="time" class="time"><button>获取当前时间</button>
+                  <!-- 上传图片 -->
+                  <!-- 输入文章 -->
+                </form>
+            </div>
+            <div class="update_aricle" id="update_aricle" style="display: none;">
+                修改文章
+            </div>
+            <div class="delete_aricle" id="delete_aricle" style="display: none;">
+                删除文章
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

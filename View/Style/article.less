@@ -1,0 +1,100 @@
+.main{
+    width: 100%;
+    height: 100%;
+    // background-color: #fff;
+    padding: 62px 0 62px 0;
+    display: flex;
+    justify-content: center;
+    .blt_layout{
+        box-sizing: border-box;
+        display: flex;
+        // justify-content: space-evenly;
+        width: 1200px;
+        height: 100%;
+        padding: 10px 90px 10px 90px;
+        justify-content: space-around;
+        .left_layout{
+            margin-top: 60px;
+            box-sizing: border-box;
+            width: 700px;
+            height: auto;
+            background-color: #fff;
+            .blt_article_main{
+                width: 650px;
+                height: auto;
+                margin: 0 auto;
+                background-color: #fff;
+                .article_header{
+                    margin: 0 auto;
+                    width: 650px;
+                    height: 140px;
+                    // background-color: rgb(176, 153, 153);
+                    position: relative;
+                    .title{
+                        position: absolute;
+                        top: 30px;
+                        left: 20px;
+                        padding: 0;
+                        font-size: 28px;
+                    }
+                    .time{
+                        position: absolute;
+                        top: 90px;
+                        left: 40px;
+                        padding: 0;
+                        color: rgb(157, 157, 157);
+                        &::before{
+                            content: "发布时间：";
+                        }
+                    }
+                    .name{
+                        position: absolute;
+                        top: 90px;
+                        left: 290px;
+                        padding: 0;
+                        color: rgb(157, 157, 157);
+                        &::before{
+                            content: "作者·";
+                        }
+                    }
+                }
+                .article_img{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    justify-tracks: 0;
+                    img{
+                        margin: 10px;
+                        min-width: 230px;
+                        max-width: 500px;
+                    }
+                }
+                .article_text{
+                    box-sizing: border-box;
+                    width: 650px;
+                    margin: 0 auto;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    p{
+                        margin-bottom: 10px;
+                        text-indent: 20px;
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+        .right_layout{
+            width: 320px;
+            height: auto;
+            margin-top: 60px;
+            margin-left: 30px;
+            // background-color: #fff;
+            .img{
+                // border-radius: 100%;
+                overflow: hidden;
+                width: 100%;
+                background-color: #fff;
+            }
+        }
+    }
+}
