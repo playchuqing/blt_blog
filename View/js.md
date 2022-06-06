@@ -7,5 +7,6 @@ link="'+link[i]+'";可以传递的参数
 跳转方法一：
 在新窗体打开页面
 link="'+link[i]+'";可以传递的参数
-``` window.open('./Html/article.html?link="'+link[i]+'"'); ``` 
+``` window.open('./Html/article.html?link="'+link[i]+'"'); ```
+`上传`  
 
