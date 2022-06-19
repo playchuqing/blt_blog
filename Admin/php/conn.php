@@ -10,4 +10,5 @@ if(!$dbselsect)
 	die('数据库不可用：'.mysqli_error($conn));
 }
 mysqli_query($conn,"set names utf8");
+//header("content-type:application/json");
 ?>

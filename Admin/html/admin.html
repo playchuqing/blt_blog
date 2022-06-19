@@ -9,7 +9,12 @@
     <link rel="shortcut icon" href="../assets/favicon (1).ico" type="image/x-icon">
     <link rel="stylesheet" href="../style/style.css" charset="UTF-8">
     <script src="../JS/node_modules/jquery/dist/jquery.js"></script>
-    <script src="../JS/adminsAPI.js"></script>
+    <script src="../JS/admin.js"></script>
+    <script>
+        //字符串截取，获取需要的参数
+        var bltID = location.search.substr(7);
+        // console.log(bltID);
+    </script>
 </head>
 
 <body>
@@ -30,9 +35,9 @@
             </div>
         </div>
         <div class="main_box">
-            <div class="left_box_nav">
+            <div class="left_box_nav" id="left_box_nav">
                 <ul>
-                    <li class="article_admin" onclick="articleAPI()">文章管理</li>
+                    <li class="article_admin">文章管理</li>
                     <li class="info_admin">信息管理</li>
                     <li class="genduo_admin">其他设置</li>
                 </ul>

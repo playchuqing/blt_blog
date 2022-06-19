@@ -1,8 +1,9 @@
+
 function check(){
     var uname=document.getElementById("uname").value;
     var upass=document.getElementById("upass").value;
     if(uname==""){
-        alert("用户名不正确");
+        alert("请输入用户名");
         document.getElementById("uname").focus();
         return false;
     }else if(upass==""){
@@ -11,6 +12,6 @@ function check(){
         return false;
     }else{
         document.getElementById("f_login").submit();
-        return true;
+		return true;
     }
 }

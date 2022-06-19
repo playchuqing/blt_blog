@@ -9,15 +9,16 @@
     <script src="../Script/node_modules/jquery/dist/jquery.js"></script>
 </head>
 <body>
+    <input type="text" id="text" name="text">
     <input type="file" id="images" name="images"  multiple>
     <input type="button" value="上传" onclick="uploadfile()">
     <ul id="imglists">
-       
+        
     </ul>
    <script>
        function uploadfile(){
         document.getElementById("imglists").innerHTML="";
-        
+        var text = document.getElementById('text').value;
         var file = document.getElementById('images').files;
         // console.log(file.length);
         var qr = confirm("确定发布文章吗？");
@@ -30,9 +31,11 @@
             return fales;
         }
         var formData = new FormData();
+        console.log(file.length);
         for(var i = 0;i<file.length;i++){
             formData.append("file["+i+"]",file[i]);
         }
+        formData.append('text',text)
         $.ajax({
             url:'http://localhost:82/测试内容/php/upImage.php',
             type:'post',
@@ -47,10 +50,10 @@
                 var rels = JSON.parse(res);
                 console.log(rels);
                 // console.log(JSON.parse(res);
-                for (var key in rels){
+                for (var key in rels['imgs']){
                 var lists = document.createElement('li');
                 lists.style.listStyle="none";
-                lists.innerHTML='<img src="'+rels[key]+'" alt="" width="'+200+'">';
+                lists.innerHTML='<img src="'+rels['imgs'][key]+'" alt="" width="'+200+'">';
                 document.getElementById('imglists').appendChild(lists);
                 }      
             }

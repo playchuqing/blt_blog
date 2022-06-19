@@ -40,3 +40,51 @@ if(is_uploaded_file($file['tmp_name'])){
 </body>
 </html>
 ```
+### 通过ajax上传 formdata方式
+```js
+function uploadfile(){
+        document.getElementById("imglists").innerHTML="";
+        
+        var file = document.getElementById('images').files;
+        // console.log(file.length);
+        var qr = confirm("确定发布文章吗？");
+
+        if(!qr){
+            return false
+        }else{
+        if(file == null || file == ""){
+            console.log("请上传图片");
+            return fales;
+        }
+        var formData = new FormData();
+        for(var i = 0;i<file.length;i++){
+            formData.append("file["+i+"]",file[i]);
+        }
+        $.ajax({
+            url:'http://localhost:82/测试内容/php/upImage.php',
+            type:'post',
+            data:formData,
+            dataType:'text',
+            async:false,//true同步传输/fasle异步传输
+            contentType:false,
+            //告诉jQuery不要去设置Content-Type请求头
+            cache:false,//每次读取的是最新数据
+            processData:false,
+            success:function(res){
+                var rels = JSON.parse(res);
+                console.log(rels);
+                // console.log(JSON.parse(res);
+                for (var key in rels){
+                var lists = document.createElement('li');
+                lists.style.listStyle="none";
+                lists.innerHTML='<img src="'+rels[key]+'" alt="" width="'+200+'">';
+                document.getElementById('imglists').appendChild(lists);
+                }      
+            }
+        })
+    }
+    }
+```
+```js
+formData.append('name',value) //追加的数据在php中用$_post获取
+```

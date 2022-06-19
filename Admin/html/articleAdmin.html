@@ -5,10 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>文章管理</title>
+    <link rel="shortcut icon" href="../assets/favicon(1).ico" type="image/x-icon">
     <link rel="stylesheet" href="../style/articleAdmin.css">
-    <script src="../JS/aricleAdmin_btn.js"></script>
     <script src="../JS/node_modules/jquery/dist/jquery.js"></script>
+    <script src="../JS/aricleAdmin_btn.js"></script>
+    <script>
+        var bltID = location.search.substr(7);
+        console.log(bltID);
+        sessionStorage.setItem("bltID",'7');
+    </script>
 </head>
 
 <body>
@@ -25,69 +31,30 @@
             </div>
         </div>
         <div class="content">
-            <div class="select_aricle" id="select_aricle" style="display: none;">
+            <div class="select_aricle" id="select_aricle" style="display: block;">
                 查看文章
             </div>
             <div class="insert_aricle" id="insert_aricle" style="display: none;">
-                <input type="file" id="images" name="images"  multiple>
-                <input type="button" value="上传" onclick="uploadfile()">
-                <ul id="imglists">
-                   
-                </ul>
-               <script>
-                   function uploadfile(){
-                    document.getElementById("imglists").innerHTML="";
-                    
-                    var file = document.getElementById('images').files;
-                    // console.log(file.length);
-                    var qr = confirm("确定发布文章吗？");
-            
-                    if(!qr){
-                        return false
-                    }else{
-                    if(file == null || file == ""){
-                        console.log("请上传图片");
-                        return fales;
-                    }
-                    var formData = new FormData();
-                    for(var i = 0;i<file.length;i++){
-                        formData.append("file["+i+"]",file[i]);
-                    }
-                    $.ajax({
-                        url:'http://localhost:83/php/uparticle.php',
-                        type:'post',
-                        data:formData,
-                        dataType:'text',
-                        async:false,//true同步传输/fasle异步传输
-                        contentType:false,
-                        //告诉jQuery不要去设置Content-Type请求头
-                        cache:false,//每次读取的是最新数据
-                        processData:false,
-                        success:function(res){
-                            var uls = document.getElementById("imglists");
-                            uls.style.display='flex';
-                            uls.style.justifyContent='center';
-                            uls.style.alignItems='center';
-                            var rels = JSON.parse(res);
-                            console.log(rels);
-                            // console.log(JSON.parse(res);
-                            for (var key in rels){
-                            var lists = document.createElement('li');
-                            lists.style.listStyle="none";
-                            lists.innerHTML='<img src="'+rels[key]+'" alt="" width="'+200+'">';
-                            document.getElementById('imglists').appendChild(lists);
-                            }      
-                        }
-                    })
-                }
-                }
-                </script>
-                <hr />
-                <form action="http://localhost:83/php/uparticle2.php" method="post">
-                    <input type="text" name="title" id="title" placeholder="标题"><br />
-                    <textarea name="text" id="text" cols="30" rows="10"></textarea><br />
-                    <input type="submit" value="提交">
-                </form>
+               <!-- 
+                UID
+                标题
+                发布时间
+                图片
+                文章
+                -->
+                <div class="aricle_info" id="aricle_info">
+                    <input type="text" id="title" placeholder="请输入标题"><br/>
+                    <textarea id="content"></textarea><br/>
+                    <input type="date" id="time"><br/>
+                    <input type="file" id="imgs" name="imgs" multiple>
+                    <input type="button" value="UPLOAD" onclick="article_upload()">
+                    <hr>
+                    <div class="imgs_lis">
+                        <ul>
+                            
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="update_aricle" id="update_aricle" style="display: none;">
                 修改文章
